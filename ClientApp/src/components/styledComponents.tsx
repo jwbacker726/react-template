@@ -13,6 +13,21 @@ export const OrangeDiv = styled.div`
   }
 `;
 
+export const MyMessage = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+`;
+
+export const AnimationHost = styled.div`
+    position: relative;
+    border: 1px solid gray;
+    border-radius: 10px;
+    height: 300px;
+    width: 150px;
+`;
+
+
 export const MyButton = styled.button`
   border-radius: 10px;
   background-color: steelblue;
