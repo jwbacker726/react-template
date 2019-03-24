@@ -1,14 +1,15 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+import styled from "styled-components";
 
-type TestShitProps = {
-
-};
+type TestShitProps = {};
 
 export class TestShit extends Component<TestShitProps> {
+  render() {
 
-    render() {
-        return (
-            <div>Test Shit</div>
-        );
-    }
+    const OrangeDiv = styled.div`
+        background-color: orange;
+    `;
+
+    return <OrangeDiv>Test Shit</OrangeDiv>;
+  }
 }
