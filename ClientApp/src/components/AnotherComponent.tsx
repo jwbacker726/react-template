@@ -11,5 +11,5 @@ export default class AnotherComponent extends Component {
   onClick = () => {
     console.log("clicked");
     toastr.success("You clicked me! Yea!!!");
-  };
+  }
 }
