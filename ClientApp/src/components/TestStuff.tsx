@@ -8,17 +8,18 @@ import {
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import "./test.scss";
 const AnotherComponent = React.lazy(() => import("./AnotherComponent"));
+const Test = React.lazy(() => import("./hook"));
 
-type TestShitProps = {};
+type TestStuffProps = {};
 
-type TestShitState = {
+type TestStuffState = {
   items: string[];
   counter: number;
   showSomething: boolean;
 };
 
-export class TestShit extends Component<TestShitProps, TestShitState> {
-  constructor(props: TestShitProps) {
+export class TestStuff extends Component<TestStuffProps, TestStuffState> {
+  constructor(props: TestStuffProps) {
     super(props);
 
     this.state = {
@@ -39,6 +40,9 @@ export class TestShit extends Component<TestShitProps, TestShitState> {
 
     return (
       <div>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Test />
+        </Suspense>
         <Suspense fallback={<div>Loading...</div>}>
           <AnotherComponent />
         </Suspense>
@@ -65,7 +69,7 @@ export class TestShit extends Component<TestShitProps, TestShitState> {
           </ReactCSSTransitionGroup>
         </AnimationHost>
         <div>Just here to see when stuff is removed from the DOM</div>
-      </div>	
+      </div>
     );
   }
 
