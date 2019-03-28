@@ -13,6 +13,13 @@ export const OrangeDiv = styled.div`
   }
 `;
 
+export const PrettyBorder = styled.div`
+  padding: 1em;
+  border: 2px solid purple;
+  border-radius: 5px;
+  margin: 2em;
+`;
+
 export const MyMessage = styled.div`
     position: absolute;
     top: 0;

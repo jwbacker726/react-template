@@ -20,6 +20,24 @@
 	transition: all 300ms ease-in-out
 }
 
+.test-enter {
+	opacity: .01;
+}
+
+.test-enter.test-enter-active {
+	opacity: 1;
+	transition: all 500ms ease-in-out;
+}
+
+.test-leave {
+	opacity: 1;
+}
+
+.test-leave-active {
+	opacity: 0;
+	transition: opacity 300ms ease-in-out
+}
+
 .something-enter {
     opacity: 0;
     transition: opacity 500ms;

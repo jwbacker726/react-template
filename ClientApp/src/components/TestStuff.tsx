@@ -8,7 +8,7 @@ import {
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import "./test.scss";
 const AnotherComponent = React.lazy(() => import("./AnotherComponent"));
-const Test = React.lazy(() => import("./hook"));
+import { UsesHooks, test } from "./hook";
 
 type TestStuffProps = {};
 
@@ -40,8 +40,10 @@ export class TestStuff extends Component<TestStuffProps, TestStuffState> {
 
     return (
       <div>
+        {/* can't use this here */}
+        {/* {test("bbbbbbbb")} */}
         <Suspense fallback={<div>Loading...</div>}>
-          <Test />
+          <UsesHooks />
         </Suspense>
         <Suspense fallback={<div>Loading...</div>}>
           <AnotherComponent />
@@ -52,12 +54,12 @@ export class TestStuff extends Component<TestStuffProps, TestStuffState> {
           transitionLeaveTimeout={250}
           transitionAppear={true}
           transitionAppearTimeout={500}
-          transitionName="spicy"
+          transitionName="test"
         >
           {items}
         </ReactCSSTransitionGroup>
         <MyButton onClick={() => this.addItem("foobar")}>Add Item</MyButton>
-        <OrangeDiv>Test Shit</OrangeDiv>
+        <OrangeDiv>Test stuff</OrangeDiv>
         <h3>Animating a single item:</h3>
         <AnimationHost>
           <ReactCSSTransitionGroup
