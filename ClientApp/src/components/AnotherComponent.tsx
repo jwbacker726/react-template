@@ -8,6 +8,7 @@ export default class AnotherComponent extends Component {
   public render() {
     return (
       <PrettyBorder>
+        <div>...{process.env.REACT_APP_PUBLIC_URL}....</div>
         <h5>Another component</h5>
         <div onClick={this.onClick}>{"click =>" + moment(new Date()).format("LL")}</div>
       </PrettyBorder>
