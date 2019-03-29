@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@types/underscore": "^1.8.13",
+    "jquery": "^3.3.1",
+    "underscore": "^1.9.1"
+  }
+}
