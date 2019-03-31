@@ -43,7 +43,7 @@ export class TestStuff extends Component<TestStuffProps, TestStuffState> {
         {/* can't use this here */}
         {/* {test("bbbbbbbb")} */}
         <Suspense fallback={<div>Loading...</div>}>
-          <UsesHooks />
+          <UsesHooks favoriteCollegeBasketballTeam="Kentucky" />
         </Suspense>
         <Suspense fallback={<div>Loading...</div>}>
           <AnotherComponent />
