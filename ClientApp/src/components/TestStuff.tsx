@@ -8,7 +8,7 @@ import {
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import "./test.scss";
 const AnotherComponent = React.lazy(() => import("./AnotherComponent"));
-import { UsesHooks, test } from "./hook";
+import { UsesHooks } from "./hook";
 
 type TestStuffProps = {};
 

@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 
-export class FetchData extends Component {
+type FetchDataState = {
+  forecasts: any[];
+  loading: boolean;
+};
+
+type FetchDataProps = {};
+
+export class FetchData extends Component<FetchDataProps, FetchDataState> {
   static displayName = FetchData.name;
 
   constructor (props) {
@@ -15,6 +22,10 @@ export class FetchData extends Component {
       .finally(() => {
         this.setState({ loading: false });
       });
+  }
+
+  componentDidCatch() {
+    debugger;
   }
 
   static renderForecastsTable (forecasts) {

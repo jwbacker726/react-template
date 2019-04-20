@@ -11,6 +11,10 @@ const LotsOfImports = React.lazy(() => import("./components/LotsOfImports"));
 export default class App extends Component {
   static displayName = App.name;
 
+  componentDidCatch() {
+    debugger;
+  }
+
   render() {
     return (
       <Layout>
